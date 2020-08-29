@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b536b3c6-cc25-46bd-9924-3a949032a13e" name="Default Changelist" comment="" />
+    <list default="true" id="b536b3c6-cc25-46bd-9924-3a949032a13e" name="Default Changelist" comment="增加router">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1gkswuZeSkTZyIWvNA3edTCdtnM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -18,8 +25,11 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.practice.html">
+  <component name="RunManager" selected="JavaScript Debug.practice.html (1)">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/D2/01_VueRouter/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="practice.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/D2/02_NestRoute/practice.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="practice.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/D2/01_VueRouter/practice.html" useBuiltInWebServerPort="true">
@@ -27,6 +37,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.practice.html (1)" />
         <item itemvalue="JavaScript Debug.practice.html" />
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
@@ -40,22 +51,46 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598670167143</updated>
-      <workItem from="1598670168345" duration="2459000" />
+      <workItem from="1598670168345" duration="3166000" />
     </task>
+    <task id="LOCAL-00001" summary="補檔">
+      <created>1598672773661</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598672773661</updated>
+    </task>
+    <task id="LOCAL-00002" summary="增加router">
+      <created>1598672997332</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598672997332</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="補檔" />
+    <MESSAGE value="增加router" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加router" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="260" key="FileChooserDialogImpl" timestamp="1598672626824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598672626824" />
-    <state x="834" y="417" key="Github.ShareDialog" timestamp="1598672445497">
+    <state x="834" y="417" key="Github.ShareDialog" timestamp="1598672667523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="834" y="417" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598672445497" />
+    <state x="834" y="417" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598672667523" />
+    <state x="803" y="224" key="Github.UntrackedFilesDialog" timestamp="1598672704175">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="803" y="224" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598672704175" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1598672629382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
