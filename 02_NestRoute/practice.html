@@ -64,6 +64,24 @@
           </h1>
         `
       };
+      const router = new VueRouter({
+        path:'/framework',
+        component: framework,
+        children:[
+          {
+            path:"vue",
+            component: vue
+          },
+          {
+            path:"angular",
+            component: angular
+          },
+          {
+            path:"react",
+            component: react
+          }
+        ]
+      })
     </script>
   </body>
 </html>
