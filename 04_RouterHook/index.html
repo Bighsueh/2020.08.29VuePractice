@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>04_RouterHook</title>
+    <link rel="stylesheet" href="../assets/layout.css" />
+    <style>
+      .router-link-exact-active {
+        color: #ffffff;
+        background-color: #34495e;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <section>
+        <div class="container">
+          <router-link tag="div" class="button" to="/">首頁</router-link>
+          <router-link tag="div" class="button" to="/start"
+            >Vue 從零開始</router-link
+          >
+          <router-link tag="div" class="button" :to="{name:'advance'}"
+            >Vue 更進一步</router-link
+          >
+          <keep-alive>
+            <router-view></router-view>
+          </keep-alive>
+        </div>
+      </section>
+    </div>
+    <script src="../assets/vue.js"></script>
+    <script src="../assets/vue-router.js"></script>
+    <script>
+      let data = {
+        login: false
+      };
+      let mixins = {
+        beforeRouteEnter(to, from, next) {
+          console.log("準備進入模組: ", to.path);
+          next();
+        },
+        beforeRouteUpdate(to, from, next) {
+          console.log("準備更新模組: ", to.path);
+          next();
+        },
+        beforeRouteLeave(to, from, next) {
+          let result = window.confirm("準備離開模組");
+          if (result) next();
+        }
+      };
+      let index = {
+        data() {
+          return data;
+        },
+        template: `
+            <div class="page">
+              <h1>哈囉大家好我是Alex，歡迎來到Alex宅幹嘛</h1>
+              <label><input type="checkbox" v-model="login" />登入</label>
+            </div>
+          `,
+        mixins: [mixins]
+      };
+      let start = {
+        template: `
+          <div class="page">
+            <h1>Vue.js 從零開始</h1>
+          </div>
+        `,
+        mixins: [mixins]
+      };
+      let advance = {
+        template: `
+          <div class="page">
+            <h1>Vue.js 更進一步</h1>
+          </div>
+        `,
+        mixins: [mixins]
+      };
+      let router = new VueRouter({
+        routes: [
+          { path: "/", component: index },
+          { path: "/start", component: index },
+          {
+            path: "/advance",
+            name: "advance",
+            meta: { auth: true },
+            component: advance,
+            beforeEnter(to, from, next) {
+              console.log("準備進入路由: ", to.path);
+              next();
+            }
+          }
+        ]
+      });
+
+      router.beforeEach(function(to, from, next) {
+        if (to.meta.auth) {
+          if (!data.login) {
+            console.log("登入驗證失敗");
+            return next("/");
+          }
+        }
+        next();
+      });
+
+      new Vue({
+        el: "#app",
+        router
+      });
+    </script>
+  </body>
+</html>

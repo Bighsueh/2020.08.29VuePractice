@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>01_VueRouter</title>
+    <link rel="stylesheet" href="../assets/layout.css"/>
+</head>
+<body>
+<div id="app">
+    <section>
+        <div class="container">
+        <router-link to="/">AAA</router-link>
+        <router-link to="/test">BBB</router-link>
+        <router-view></router-view></div>
+    </section>
+</div>
+<script src="../assets/vue.js"></script>
+<script src="../assets/vue-router.js"></script>
+<script>
+    const data = {}
+    const AAA = {
+        template: "<div>AAA</div>",
+    }
+    const BBB = {
+        template: "<div>BBB</div>",
+    }
+    const router = new VueRouter({
+        routes: [
+            {
+                path: "/",
+                component: AAA
+            },
+            {
+                path: "/test",
+                component: BBB
+            }
+        ]
+    });
+    new Vue({
+        el: '#app',
+        data,
+        router
+    });
+</script>
+</body>
+</html>
